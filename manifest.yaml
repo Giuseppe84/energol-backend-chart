@@ -17,9 +17,9 @@ spec:
           image: ghcr.io/giuseppe84/energol-ledger-backend:latest
           ports:
             - containerPort: 4000
-          env:
-            - name: DATABASE_URL
-              value: postgresql://mgem:qazsazsa@10.0.1.109:5432/mgemdata?schema=public&charset=utf8
+         envFrom:
+            - secretRef:
+                name: energol-backend-env
       imagePullSecrets:
         - name: ghcr-secret
 ---
