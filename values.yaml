@@ -1,0 +1,13 @@
+replicaCount: 1
+image:
+  repository: ghcr.io/Giuseppe84/energol-ledger-backend
+  tag: latest
+  pullPolicy: Always
+service:
+  type: ClusterIP
+  port: 4000
+env:
+  - name: DATABASE_URL
+    value: "postgresql://mgem:qazsazsa@10.0.1.109:5432/mgemdata?schema=public&charset=utf8"
+  - name: JWT_SECRET
+    value: "supersecret"
