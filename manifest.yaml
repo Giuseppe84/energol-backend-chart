@@ -20,6 +20,8 @@ spec:
           env:
             - name: DATABASE_URL
               value: postgresql://mgem:qazsazsa@10.0.1.109:5432/mgemdata?schema=public&charset=utf8
+      imagePullSecrets:
+        - name: ghcr-secret
 ---
 apiVersion: v1
 kind: Service
