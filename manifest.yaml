@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/giuseppexx84/energol-ledger-backend:latest
+          image: ghcr.io/Giuseppe84/energol-ledger-backend:latest
           ports:
             - containerPort: 4000
           env:
